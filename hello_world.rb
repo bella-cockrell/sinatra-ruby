@@ -1,9 +1,5 @@
 require "sinatra"
-require "date"
-
-def day_of_the_week(time)
-    Date::DAYNAMES[time.wday]
-end
+require_relative "day"
 
 get "/" do
     "Hello everyone! Happy #{day_of_the_week(Time.now)}"
