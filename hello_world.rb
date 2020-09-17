@@ -1,9 +1,7 @@
 require "sinatra"
 
 get "/" do
-  "Put this in your pipe and smoke it!"
+    DAYNAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    day = DAYNAMES[Time.now.wday]
+    "Hello everyone! Happy #{day}"
 end
-
-get "/wait" do
-    "Don't smoke kids!"
-  end
